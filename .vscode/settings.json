@@ -1,0 +1,71 @@
+{
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true // 保存時にeslintを実行する
+  },
+
+  "eslint.alwaysShowStatus": false, // ステータスバーにESLintを表示しない
+  "eslint.workingDirectories": [
+    // .eslintrc*を見てESLintの適用を自動で行う
+    {
+      "mode": "auto"
+    }
+  ],
+  "eslint.options": {
+    // .eslintrc.js自身をlintする
+    "ignorePattern": "!.eslintrc.js"
+  },
+
+  // ファイルの対応
+  "files.associations": {
+    "*.vue": "vue",
+    "*.uiflow": "uiflow",
+    "*.*lintrc": "json",
+    "Schemafile": "ruby",
+    "zshrc": "shellscript",
+    "settings.json": "jsonc"
+  },
+
+  // [要検証] ファイルの自動監視対象から除外（動作軽量化が目的）
+  "files.watcherExclude": {
+    "**/.git/objects/**": true,
+    "**/.git/subtree-cache/**": true,
+    "**/node_modules/**": true,
+    "**/images/**": true,
+    "**/img/**": true,
+    "**/swf/**": true,
+    "**/Repos/**": true
+  },
+
+  "vetur.validation.script": true, // [要検証] tsを使う場合はVeturのpathが解決できてないのでfalseにする。ESLintとかち合うか検証中
+
+  // ====================
+  // Default Language
+  // ====================
+  "html.format.enable": false, // ESLintとかち合うため無効にする
+  "javascript.format.enable": false, // ESLintとかち合うため無効にする
+  "javascript.validate.enable": false, // デフォルトで入っているjavascriptのLintは無効
+  "typescript.format.enable": false, // ESLintとかち合うため無効にする
+
+  // ====================
+  // Language
+  // ====================
+  "[markdown]": {
+    "files.trimTrailingWhitespace": false // markdownでは末尾の空白削除をしない
+  },
+  "[vue]": {
+    "editor.formatOnSave": false, // ESLintでフォーマットする
+    "files.trimTrailingWhitespace": false // vueでは末尾の空白削除をしない（pug用）
+  },
+  "[javascript]": {
+    "editor.formatOnSave": false // ESLintでフォーマットする
+  },
+  "[jsonc]": {
+    "editor.formatOnSave": false // フォーマットしない
+  },
+  "[settings.json]": {
+    "editor.formatOnSave": false // フォーマットしない
+  },
+  "[keybindings.json]": {
+    "editor.formatOnSave": false // フォーマットしない
+  }
+}

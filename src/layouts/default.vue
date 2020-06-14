@@ -48,12 +48,12 @@ export default {
         {
           icon: 'mdi-apps',
           title: 'Index',
-          to: '/'
-        }
+          to: '/',
+        },
       ],
       miniVariant: false,
-      title: 'Pow Data'
+      title: 'Pow Data',
     }
-  }
+  },
 }
 </script>
