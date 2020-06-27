@@ -3,12 +3,11 @@ name: Deploy Staging(firebase hosting)
 on: push
 jobs:
   deploy:
-    runs-on: ubuntu-latest
+    runs-on: macos-latest
     steps:
       - name: Install yarn and Build
         working-directory: ./src
         run: |
-          ls .
           yarn install
           yarn generate
       - name: Ready to Deploy
