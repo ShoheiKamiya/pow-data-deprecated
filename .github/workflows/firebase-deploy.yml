@@ -21,6 +21,7 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
     - name: yarn install, generate
+      working-directory: /home/runner/work/pow-data/pow-data/src
       run: |
            yarn install
            yarn run generate --if-present
