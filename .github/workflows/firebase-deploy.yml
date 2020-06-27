@@ -4,7 +4,6 @@
 name: firebase deploy
 
 on: push
-  - staging
 
 jobs:
   build:
