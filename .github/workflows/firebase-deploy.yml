@@ -4,6 +4,7 @@
 name: firebase deploy
 
 on: push
+  - staging
 
 jobs:
   build:
@@ -23,10 +24,10 @@ jobs:
     - name: yarn install, generate
       working-directory: /home/runner/work/pow-data/pow-data/src
       run: |
-           yarn install
-           yarn run generate --if-present
+          yarn install
+          yarn run generate --if-present
     - name: deploy to Firebase Hosting
-      uses: w9jds/firebase-action@master
+      uses: w9jds/firebase-action@v1.5.0
       with:
         args: deploy --only hosting
       env:
