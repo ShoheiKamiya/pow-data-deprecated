@@ -12,7 +12,7 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [8.x, 10.x, 12.x]
+        node-version: [10.x]
 
     steps:
     - uses: actions/checkout@v2
@@ -20,10 +20,10 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: ${{ matrix.node-version }}
-    - name: npm install, generate
+    - name: yarn install, generate
       run: |
-           npm install
-           npm run generate --if-present
+           yarn install
+           yarn run generate --if-present
     - name: deploy to Firebase Hosting
       uses: w9jds/firebase-action@master
       with:
