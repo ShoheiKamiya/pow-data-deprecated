@@ -3,7 +3,10 @@
 
 name: firebase deploy
 
-on: push
+on:
+  push:
+    branches:
+    - staging
 
 jobs:
   build:
